@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace AplikasiTugasTiga2
 {
-	public partial class Form1 : Form
+	public partial class frmTugasTiga2 : Form
 	{
-		public Form1()
+		public frmTugasTiga2()
 		{
 			InitializeComponent();
+		}
+
+		private void btnOk_Click(object sender, EventArgs e)
+		{
+			var nama = txtNama.Text;
+			var pendidikan = cmbPendidikan.Text;
+			var pekerjaan = lstPekerjaan.Text;
+
+			txtPesan1.Text = string.Format("hallo {0}", nama);
+			txtPesan2.Text = string.Format("pendidikan anda {0} ya?", pendidikan);
+			txtPesan3.Text = string.Format("anda seorang {0} hebat ", pekerjaan);
 		}
 	}
 }
